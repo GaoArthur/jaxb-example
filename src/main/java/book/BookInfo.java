@@ -3,11 +3,11 @@ package book;
 import lombok.Data;
 
 import javax.xml.bind.annotation.*;
-import java.util.Date;
 import java.util.List;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
+//@XmlType(propOrder = {"publication_date"})
 @Data
 public class BookInfo {
 
@@ -39,10 +39,12 @@ public class BookInfo {
 
     private String description;
 
-    @XmlElementWrapper(name = "details")
-    private List<Details> details;
-
-    private Date publication_date;
+    private String format;
+    private String dimension;
+    //not working
+    //@XmlJavaTypeAdapter(LocalDateAdapter.class)
+    //private LocalDate publication_date;
+    private String publication_date;
     private String publisher;
     private String imprint;
     private String publication_CityOrCountry;
@@ -51,8 +53,5 @@ public class BookInfo {
     private int bestseller_rank;
 
     private List<String>author_description;
-
-    @XmlElementWrapper(name = "rating")
-    private List<Rating>ratings;
 
 }

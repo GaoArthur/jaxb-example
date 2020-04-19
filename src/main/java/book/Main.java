@@ -2,7 +2,8 @@ package book;
 
 import jaxb.JAXBHelper;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * (string)isbn: 9780785837350
@@ -78,15 +79,10 @@ public class Main {
                 " *      Containing every known Sherlock Holmes tale ever written and featuring a comprehensive introduction by renowned Holmes scholar Daniel Stashower (author of A Teller of Tales: The Life of Arthur Conan Doyle and Sherlock Holmes in America) with enlightening information on the author's life and works, this elegantly designed edition brings the world's greatest detective to life. From Holmes' first appearance in \"A Study in Scarlet\" (1887) and The Hound of the Baskervilles (1901-1902), through the collection of stories in the The Case-Book of Sherlock Holmes, this deluxe edition boasts the entire Holmes catalog.\n" +
                 " *      For Sherlock Holmes fans worldwide, this stunning hardcover edition is the perfect gift.");
 
-        //ArrayList<Format> details = new ArrayList<>();
-        //details.add(new Format("Hardback",1200));
-        //ArrayList<Dimension>dimensions = new ArrayList<>();
-        //details.add(new Details.Dimension(165, 235, 70, 1837.05, "g"));
-        //bookInfo.setDetails(details);
-
-        Date publication = new GregorianCalendar(2019, Calendar.JUNE, 25).getTime();
-        bookInfo.setPublication_date(publication);
-
+        bookInfo.setFormat("Hardback, 1200 pages");
+        bookInfo.setDimension("165 x 235 x 70mm, 1,837.05g");
+        //bookInfo.setPublication_date(LocalDate.of(2019, 6, 25));
+        bookInfo.setPublication_date("25 Jun 2019");
         bookInfo.setPublisher("Book Sales Inc");
         bookInfo.setImprint("Chartwell Books Inc.,U.S");
         bookInfo.setPublication_CityOrCountry("Edison, United States");
