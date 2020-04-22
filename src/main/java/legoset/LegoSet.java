@@ -34,8 +34,7 @@ public class LegoSet {
     @XmlElement(name = "minifig")
     private List<Minifig> minifigs;
 
-    @XmlElement(name = "weight")
-    private List<Weight> weight;
+    private Weight weight;
 
     private URL url;
 
